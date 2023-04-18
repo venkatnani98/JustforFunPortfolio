@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body, html{
+            background-image: linear-gradient(to right, grey,black);
+            color: blanchedalmond;
+        }
+
+
+        #main,#mainpage,#experience,#education, #skills, #info{
+            border: 5px solid black;
+            margin-bottom: 5px;
+            background-image: url(https://i.ibb.co/HVs0y86/bg3.jpg);
+            background-size: 1800px;
+        }
+        #mainpage{
+            padding-top: 100px;
+        }
+
+        .nav{
+            position: sticky;
+            top: 10px;
+        }
+
+
+        #working_gif{
+            float: right;
+            margin-right: 200px;
+            border-radius: 50px;
+        }
+
+        #school{
+            float: left;
+            border-radius: 50px;
+            margin-top: 50px;
+            margin-left: 100px;
+            width: 400px;
+        }
+
+        #college{
+            float: right;
+            margin-top: 80px;
+            margin-right: 50px;
+            border-radius: 50px;
+            width: 450px;
+        }
+
+        #nav_logo{
+            margin-bottom: 30px;
+            margin-left: 30px;
+        }
+        
+        #nav_logo1{
+            margin-left: -68px;
+            display: none;
+        }
+        
+            
+        .nav a{
+            margin-left: 10px;
+            padding: 20px;
+            margin-right: 10px;
+            text-decoration: none;
+            font-size: larger;
+            font-weight: bolder;
+            background-color: greenyellow;
+            border: 2px black solid;
+            border-radius: 100px;
+            display: none;
+        }
+
+        #main_info{
+            margin-top: 220px;
+            margin-left: 50px;
+            color: blanchedalmond;
+        }
+        
+        #name{
+            font-size: 80px;
+            font-family: cursive;
+        }
+        #designation{
+            font-size: 50px;
+            margin-bottom: 200px;
+        }
+        #profilepic{
+            float: right;
+            position: static;
+            margin-top: 10px
+        }
+        .experience, .education, .skills{
+            margin-left: 50px;
+            margin-right: 550px;
+        }
+        #heading{
+            font-size: 50px;
+
+        }
+        #work, #course{
+            font-family: cursive;
+            font-size: 50px;
+        }
+        #work_position, #clg{
+            font-size: 40px;
+        }
+        #period{
+            font-size: 30px;
+        }
+        li{
+            font-size: 20px;
+            padding: 20px;
+        }
+        ul{
+            margin-bottom: 50px;
+        }
+        section{
+            padding-left: 20px;
+            border: 5px dotted blanchedalmond;
+            border-style:double;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+        .education_sch, .certifications{
+           margin-left: 600px;
+           margin-right: 50px;
+        }
+
+        table{
+            border: 2px solid blanchedalmond;
+            margin: 10px;
+            border-radius: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        tr,th,td{
+            border-radius: 20px;
+            padding: 5px;
+            text-align: center;
+            border: 2px solid blanchedalmond;
+            padding-right: 200px;
+            padding-left: 200px;
+        }
+        th{ background-color: darkkhaki; color: black;}
+
+        #sp_text{text-align: center;}
+
+        .container{
+            display: grid;
+            grid-template-rows: auto auto;
+            grid-template-columns: auto auto;
+        }
+
+        .fields{
+            border: 1px solid blanchedalmond;
+            font-size: 30px; 
+        }
+        
+        #language p{
+            margin-top: 50px;
+        }
+
+        #info p{
+            margin-left: 30%;
+        }
+        #info #heading{
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+
+        #info ul{
+            margin-left: 40%;
+            font-size:xx-large;
+        }
+
+        #contact{
+            margin-left: 10%;
+            margin-right: 10%;
+            padding: 50px;
+            text-align: center;
+        }
+
+        #contact a{ text-decoration: none; color: blanchedalmond; padding-left: 20px;}
+
+        #arrow{
+            position: absolute;
+            margin-left: 270px;
+            margin-top: 100px;
+            
+        }
+
+        #back_to_top p{padding-left: 80px;}
+
+        #fun_mode{
+            padding:20px;
+            border-radius: 20px;
+            background-color: blanchedalmond;
+            font-weight: bolder;
+            float: right;
+            display: none;
+            cursor: pointer;
+        }
+
+        /*NAV Hover*/
+        
+        .nav:hover .nav_content, .nav:hover #nav_logo1, .nav:hover #fun_mode{
+            display: inline-block;
+            
+        }
+
+        .nav a:hover {
+            box-shadow: 0 0 5px greenyellow,0 0 25px greenyellow,0 0 50px greenyellow,0 0 100px greenyellow;
+        }
+
+        #fun_mode:hover{
+            box-shadow: 0 0 5px blanchedalmond,0 0 25px blanchedalmond,0 0 50px blanchedalmond,0 0 100px blanchedalmond;
+        }
+
+        td:hover{
+            background-color:darkkhaki; color: black;
+        }
+
+        /*Css Animation*/
+
+        @keyframes animate {
+            from {left :-10px }
+            to {left: 500px;}
+        }
+        #project1{ 
+            margin-top: 10px;
+            position: relative;
+            animation: animate 3s ease infinite alternate;   
+        }
+
+        @keyframes animate2 {
+            from {right :-10px }
+            to {right: 550px;}
+        }
+        #project2{ 
+            margin-top: 10px;
+            position: relative;
+            animation: animate2 3s ease infinite alternate;   
+        }
+        
+        @keyframes monkey {
+             0% {left : -350px; bottom: -80px;}
+             38%{left: 350px; bottom: -80px;}
+             40% { left:350px ; bottom: 180px;}
+             100%{left:1400px; bottom: 180px;}
+            
+        }
+
+
+        #jumping_monkey{
+            float: left;
+            position: relative;
+            overflow: hidden;
+            animation: monkey 5s linear infinite normal;
+        }
+
+        @keyframes run{
+            from {left: -100px;}
+            to {left: 1550px;}
+        }
+
+        #run{
+            position: absolute;
+            top: 780px;
+            right: -100px;
+            animation: run 5s linear infinite normal;
+        }
+
+        #jerry{
+            float: right;
+            position: relative;
+            bottom:-90px;
+            right: 600px;
+        }
+
+        #hanging{
+            position: absolute;
+            left: -30px;
+            top: 45px;
+        }
+         
+
+
+        .fun{display: none;}
+
+        
+
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <button id="nav_logo" class="nav"><img src="https://i.ibb.co/ykVC0vS/menu.png" alt="nav_logo" width="50px" ></button>
+        <button id="nav_logo1" class="nav"><img src="https://i.ibb.co/HxJ5y2H/close.png" alt="nav_logo" width="50px" ></button>
+     
+        <a href="#mainpage" class = "nav_content">Intro</a>
+        <a href="#experience" class = "nav_content">Experience</a>
+        <a href="#education" class = "nav_content">Education</a>
+        <a href="#skills" class = "nav_content">Skills</a>
+        <a href="#skills" class = "nav_content">Certifications & Projects</a>
+        <a href="#info" class = "nav_content">Other Info</a>
+        <button class="nav_content" id="fun_mode" onclick="fun()">Fun Mode</button>
+        <button class="nav_content" id="fun_mode" onclick="normal()">Normal Mode</button>
+        <img src="https://i.ibb.co/r42jjcb/monkey-hanging-hanging.gif" alt="" class="fun" id="hanging">
+    </nav>
+    
+    <div id="mainpage">
+        
+       <img src="https://i.ibb.co/QpWQYcv/pic.png" alt="Profile Picture" width="750px" id="profilepic">
+       <div id="main_info">
+           <p id="name">Venkata Ramakrishna <br> Tagarampudi</p>
+           <p id="designation">Full Stack Developer</p>
+           <img src="https://i.ibb.co/z2HtxdH/monkey-1-unscreen.gif" alt="" class="fun" id="run">
+           
+       </div> 
+    </div>
+
+    <div id="experience">
+       <p id="heading" class ="experience">Experience</p>
+       <p>
+        <h1 id="work" class ="experience">Computer Age Management Services Ltd</h1>
+        <h3 id="work_position" class ="experience">Operations Team Lead</h3>
+        <h4 id="period" class ="experience">Sep 2016 - Dec 2022 (6yrs 3months)</h4>
+        <img src="https://i.ibb.co/2vqtPSg/giphy.gif" alt="working_gif" id="working_gif" class="fun">
+        <ul id="leads" class ="experience">
+            <li>Handled high-sensitive financial data on regular basis</li>
+            <li>Providing Customer Service</li>
+            <li>Recommended ways to prove efficiency on work format</li>
+            <li>Multi-tasking work in Computer</li>
+            <li>Assisted other administrative professionals with basic office tasks</li>
+            <li>Handled Processing of more than 30 different Mutual Funds including Private Equity Funds, HFC and KYC.</li>
+        </ul>
+        
+       </p>
+    </div>
+    <div id="education">
+        <p id="heading" class ="education">Education</p>
+        <img src="https://i.ibb.co/tZhgs5z/giphy-2.gif" id="college" class="fun">
+        <section class="education">
+             <p id="course">Diploma in Mechanical Engineering with 76.36%</p>
+             <p id="period">Course Year - 2013 to 2016</p>
+             <p id="clg">T.R.R College of Technology</p>
+             <p id="area">Meerpet,Hyderabad.
+             </p>
+        </section>
+        <img src="https://i.ibb.co/XxVGH7d/giphy-1.gif" id="school" class="fun">
+        <section class="education_sch">
+            <p id="course">SSC with 8.8GPA</p>
+            <p id="period">Course Year - 2012 to 2013</p>
+            <p id="clg">Z.P. High School</p>
+            <p id="area">Neredmet,Hyderabad.
+            </p>
+       </section>
+    </div>
+    <div id="skills">
+        <p id="heading" class="skills">Software Skills</p>
+        <section class="skills">
+            <table>
+                <tr>
+                   <th>Programming Languages</th>
+                   <th>Designing Softwares</th>
+                </tr>
+                <tr>
+                    <td>Python</td>
+                    <td>CATIA V5</td>
+                </tr>
+                <tr>
+                    <td>HTML & CSS</td>
+                    <td>Unigraphics NX</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>Autodesk Inventor</td>
+                </tr>            
+                <tr>
+                    <td>Django</td>
+                    <td>AutoCAD</td>
+                </tr>
+                <tr>
+                    <td>React JS</td>
+                    <td>SolidWorks</td>
+                </tr>
+                <tr>
+                    <td>C Language</td>
+                </tr>  
+            </table>
+       </section>
+       <img src="https://i.ibb.co/LthsnpW/monkey.gif" alt="jump" id="jumping_monkey" class="fun">
+       <p id="heading" class="certifications">Projects & Certifications</p>
+       <section class="certifications" id="certifications">
+        <section class="skills" id="project1">
+            <p id="sp_text">Certificate of Advanced CAD</p>
+            <p id="sp_text">NSIC, Ecil</p>
+       </section>
+       
+       <section class="certifications" id="project2">
+           <p id="sp_text">Python Full Stack Developer</p>
+           <p id="sp_text">Byte Academy</p>
+      </section>
+    </section> 
+    </div>
+    <div id="info">
+        <div id="heading">Info</div>
+        <div class="container">
+            <div class="fields" id="language">
+                <p>Languages Known</p>
+                <p>Telugu  &nbsp;&bigstar; &bigstar; &bigstar; &bigstar; &bigstar; <br>
+                English &bigstar; &bigstar; &bigstar; &bigstar; <br>
+                Hindi   &nbsp;&nbsp;&nbsp;&bigstar; &bigstar; &bigstar; &bigstar; <br>
+                </p>
+            </div>
+            <div class="fields">
+                <p>Extra Curricular Activities</p>
+                <img src="https://i.ibb.co/X7qs3qZ/tom-y-jerry-jerry.gif" alt="" width="200px" id="jerry" class="fun">
+                <ul>
+                    <li>Singing</li>
+                    <li>Exploring</li>
+                    <li>Editing and Graphics</li>
+                    <li>Photography</li>
+                </ul>
+                
+            </div>
+            <div class="fields">
+               <p>Contact Information</p>
+               <section  id="contact">
+               <img src="https://i.ibb.co/X45pY1F/phone-call.png" alt="" width="50px" >&nbsp;<em>7702306256</em><br>
+               <img src="https://i.ibb.co/r0JwFBn/mail.png" alt="" width="50px" >&nbsp;<em>venkataramakrishna98@gmail.com</em><br>
+               <img src="https://i.ibb.co/mh6bgNV/linkedin.png" alt="" width="50px" >&nbsp;<a href="https://www.linkedin.com/in/venkatnani98/" target="_blank">Linked In Profile</a>
+               </section>
+            </div>
+            <div class="fields" id="back_to_top">
+                <a href="#mainpage" ><img src="https://i.ibb.co/2j7tytQ/up-arrow.png" alt="Arrow" id="arrow" width="200px"></a><p>Back to Top</p>
+            </div>
+        </div>
+    </div>
+
+    
+<script>
+    function fun()
+    {
+        const fun_stuff = document.getElementsByClassName("fun"); 
+
+        for (let element of fun_stuff)
+        {
+            element.style.display="block";
+        }
+
+        // for (let element of document.getElementsByClassName("fun"))
+        // {
+        // element.style.display="block";
+        // }  
+    }
+    function normal()
+    {
+        for (let element of document.getElementsByClassName("fun"))
+        {
+        element.style.display="none";
+        }  
+    }
+</script>
+
+</body>
+</html> 
